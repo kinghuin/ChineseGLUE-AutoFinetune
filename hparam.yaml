@@ -1,0 +1,16 @@
+param_list:
+- name : learning_rate
+  init_value : 0.00005
+  type : float
+  lower_than : 0.005
+  greater_than : 0.000005
+- name : blocks
+  init_value : 16
+  type : int
+  lower_than : 24
+  greater_than : 12
+- name : factor
+  init_value: 1.1
+  type: float
+  lower_than: 1.2
+  greater_than: 1.0
