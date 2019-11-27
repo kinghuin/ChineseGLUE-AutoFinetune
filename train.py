@@ -152,19 +152,15 @@ def finetune(args):
     # Finetune and evaluate by PaddleHub's API
     # will finish training, evaluation, testing, save model automatically
     cls_task.finetune_and_eval()
-    # run_states = cls_task.eval()
-    # eval_avg_score, eval_avg_loss, eval_run_speed = cls_task._calculate_metrics(
-    #     run_states)
+    
+    # save best_model
     best_model_dir = os.path.join(config.checkpoint_dir, "best_model")
-
     if is_path_valid(args.saved_params_dir) and os.path.exists(best_model_dir):
         shutil.copytree(best_model_dir, args.saved_params_dir)
         shutil.rmtree(config.checkpoint_dir)
 
-        # acc on dev will be used by auto finetune
-    # print("AutoFinetuneEval" + "\t" + str())
+    # acc on dev will be used by auto finetune
     hub.report_final_result(cls_task.best_score)
-
 
 if __name__ == "__main__":
     args = parser.parse_args()
