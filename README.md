@@ -21,7 +21,7 @@ hub autofinetune train.py --param_file=hparam.yaml --gpu=0,1,2,3,4,5,6,7 --popsi
  --output_dir="./output" --evaluator=fulltrail --tuning_strategy=hazero dataset $TARGET_DATASET
 ```
 
-其中`$TARGET_DATASET`可以是INEWS、TNEWS、XNLI、LCQMC中的任意一个，其它参数意义请参考PaddleHub AutoFinetune官方教程：[PaddleHub 超参优化 (AutoDL Finetuner)](https://github.com/PaddlePaddle/PaddleHub/blob/release/v1.4/tutorial/autofinetune.md)。有关train.py源码细节，请参考[PaddleHub文本分类迁移教程](https://github.com/PaddlePaddle/PaddleHub/wiki/PaddleHub文本分类迁移教程))以及[PaddleHub 超参优化（AutoDL Finetuner）——NLP情感分类任务](https://github.com/PaddlePaddle/PaddleHub/blob/release/v1.4/tutorial/autofinetune-nlp.md)。
+其中`$TARGET_DATASET`可以是INEWS、TNEWS、XNLI、LCQMC中的任意一个，其它参数意义请参考PaddleHub AutoFinetune官方教程：[PaddleHub 超参优化 (AutoDL Finetuner)](https://github.com/PaddlePaddle/PaddleHub/blob/release/v1.4/tutorial/autofinetune.md)。有关train.py源码细节，请参考[PaddleHub文本分类迁移教程](https://github.com/PaddlePaddle/PaddleHub/wiki/PaddleHub文本分类迁移教程)以及[PaddleHub 超参优化（AutoDL Finetuner）——NLP情感分类任务](https://github.com/PaddlePaddle/PaddleHub/blob/release/v1.4/tutorial/autofinetune-nlp.md)。
 
 调优结束后，通过以下命令启动预测：
 
