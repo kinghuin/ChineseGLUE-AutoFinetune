@@ -1,3 +1,3 @@
-# AutoFinetune
+# ChineseGLUE-AutoFinetune 
 
 Comming soon
